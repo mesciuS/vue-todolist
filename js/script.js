@@ -42,9 +42,7 @@ createApp({
 
             ],
         
-            newTodoObject: {
-                
-            }
+            newTodo: '',
         }
 
     },
@@ -54,13 +52,22 @@ createApp({
         deleteTodo(todoIndex) {
             // console.log("ciao")
             // console.log(todoIndex)
-            this.todos.splice(todoIndex, 1)
+            this.todos.splice(todoIndex, 1);
         },
 
         addTodoObject() {
             // console.log(this.newTodoObject)
-            this.todos.push(this.newTodoObject)
-        }
+            this.todos.push({
+                text: this.newTodo,
+                done: false,
+            });
+            this.newTodo = '';
+        },
+
+        doneSwap() {
+            // console.log("funziona");
+            
+        },
     },
 
 

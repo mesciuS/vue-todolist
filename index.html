@@ -13,14 +13,14 @@
     <div id="app">
 
         <ul>
-            <li v-for="(todo, index) in todos">{{todo.text}}
+            <li @click="doneSwap()" v-for="(todo, index) in todos" :style="todo.done ? {textDecoration: 'line-through'} : {}">{{todo.text}}
              - <span @click="deleteTodo(index)">X</span>
             </li>
         </ul>
 
         <br>
 
-        <input type="text" v-model="newTodoObject">
+        <input type="text" v-model="newTodo" @keyup.enter="addTodoObject()" placeholder="Aggiungi un item">
         <button @click="addTodoObject()">aggiungi</button>
 
     </div>
