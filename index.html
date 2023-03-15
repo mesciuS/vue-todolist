@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+
+
+<body>
+
+    <div id="app">
+
+        <ul>
+            <li v-for="(todo, index) in todos">{{todo.text}}
+             - <span @click="deleteTodo(index)">X</span>
+            </li>
+        </ul>
+
+        <br>
+
+        <input type="text" v-model="newTodoObject">
+        <button @click="addTodoObject()">aggiungi</button>
+
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
