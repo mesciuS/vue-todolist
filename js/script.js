@@ -67,7 +67,7 @@ createApp({
         
         toggle(todo) {
             
-            todo.done = false;
+            todo.done = !todo.done;
         },
 
     },
