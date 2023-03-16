@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 
@@ -13,7 +15,7 @@
     <div id="app">
 
         <ul>
-            <li @click="doneSwap()" v-for="(todo, index) in todos" :style="todo.done ? {textDecoration: 'line-through'} : {}">{{todo.text}}
+            <li @click="toggle(todo)" v-for="(todo, index) in todos" :style="todo.done ? {textDecoration: 'line-through'} : {}">{{todo.text}}
              - <span @click="deleteTodo(index)">X</span>
             </li>
         </ul>

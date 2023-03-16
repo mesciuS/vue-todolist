@@ -41,20 +41,21 @@ createApp({
                 },
 
             ],
-        
+            
             newTodo: '',
+            
         }
-
+        
     },
-
+    
     methods: {
-
+        
         deleteTodo(todoIndex) {
             // console.log("ciao")
             // console.log(todoIndex)
             this.todos.splice(todoIndex, 1);
         },
-
+        
         addTodoObject() {
             // console.log(this.newTodoObject)
             this.todos.push({
@@ -63,11 +64,12 @@ createApp({
             });
             this.newTodo = '';
         },
-
-        doneSwap() {
-            // console.log("funziona");
+        
+        toggle(todo) {
             
+            todo.done = false;
         },
+
     },
 
 
